@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./resources/css/signupStyles.css">
+    <link rel="icon" href="./resources/assets/tabIcon.svg" type="image/svg">
+</head>
+
+<body>
+    <section>
+        <div style="height: 100vh;" class='center-col'>
+            <form style="height: 650px;" action="./signUp.php" method='POST'>
+                <div class='datos'>
+                    <h2>EL GRAN BAZAR</h2>
+                    <h4>Formulario de registro</h4>
+                    <div class="tdocbox">
+                        <div id="radiobtn">
+                            <p>Seleccione Tipo de Documento:</p>
+                            <input type="radio" id="cc" name="tdoc" value="CC">
+                            <label for="cc">Cédula de Ciudadanía</label>
+                        </div>
+                        <div id="radiobtn">
+                            <input type="radio" id="ce" name="tdoc" value="CE">
+                            <label for="ce">Cédula Extranjería</label>
+                        </div>
+                        <div id="radiobtn">
+                            <input type="radio" id="pasaporte" name="tdoc" value="PASS">
+                            <label for="pasaporte">Pasaporte</label>
+                        </div>
+                        <div id="radiobtn">
+                            <input type="radio" id="nit" name="tdoc" value="NIT">
+                            <label for="nit">Nit</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input type="text" name="documento" id="doc" placeholder=" " autocomplete='documento' required>
+                        <label for="doc">No. Documento</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="nombre" id="nom" placeholder=" " autocomplete='nombre' required>
+                        <label for="nom">Nombre</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" id="mail"  autocomplete='email' required>
+                        <label for="mail">Correo</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" id="pass"   autocomplete='current-password' required>
+                        <label for="pass">Contraseña</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="tel" name="telefono" id="tele" placeholder=" " autocomplete='tel' required>
+                        <label for="tele">Teléfono</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="text" name="direccion" id="dir" placeholder=" " autocomplete='direccion' required>
+                        <label for="dir">Dirección</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="text" name="ciudad" id="city" placeholder=" " autocomplete='ciudad' required>
+                        <label for="city">Ciudad</label>
+                    </div>
+
+                    <div class='singupalign-end'>
+                        <div class="">
+                            <a href="./index.html">Cancelar</a>
+                        </div>
+                        <button  type='submit'>Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar usuario</title>
+    <link rel="stylesheet" href="./resources/css/signupUserStyles.css">
+    <link rel="icon" href="./resources/assets/tabIcon.svg" type="image/svg">
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get("id");
+
+            // Set the action attribute of the form dynamically
+            if (id) {
+                document.getElementById("updateForm").action = `./updateUser.php?id=${id}`;
+                document.getElementById("cancelBtn").href = `./dashboard.php?id=${id}`;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <section>
+        <div style="height: 100vh;" class='center-col'>
+            <form style="height: 745px;" id='updateForm' method='POST'>
+                <div class='datos'>
+                    <h2>Actualizar Información del Empleado</h2>
+                    <h4>Formulario de Actualización</h4>
+                    <div class="tdocbox">
+                        <div id="radiobtn">
+                            <p>Seleccione Tipo de Documento:</p>
+                            <input type="radio" id="cc" name="tdoc" value="CC">
+                            <label for="cc">Cédula de Ciudadanía</label>
+                        </div>
+                        <div id="radiobtn">
+                            <input type="radio" id="ce" name="tdoc" value="CE">
+                            <label for="ce">Cédula Extranjería</label>
+                        </div>
+                        <div id="radiobtn">
+                            <input type="radio" id="pasaporte" name="tdoc" value="PASS">
+                            <label for="pasaporte">Pasaporte</label>
+                        </div>
+                        <div id="radiobtn">
+                            <input type="radio" id="nit" name="tdoc" value="NIT">
+                            <label for="nit">Nit</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="documento" id="doc" placeholder=" " autocomplete='documento' required>
+                        <label for="doc">No. Documento</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="nombre" id="nom" placeholder=" " autocomplete='nombre' required>
+                        <label for="nom">Nombre</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="apellido" id="apellido" placeholder=" " autocomplete='apellido' >
+                        <label for="apellido">Apellido</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="area" id="area" placeholder=" " autocomplete='area' required>
+                        <label for="area">Area</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="email" id="mail" autocomplete='email' required>
+                        <label for="mail">Correo</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" id="pass" autocomplete='current-password'
+                            required>
+                        <label for="pass">Contraseña</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="tel" name="telefono" id="tele" placeholder=" " autocomplete='tel' required>
+                        <label for="tele">Teléfono</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="username" id="username"  autocomplete='username' required>
+                        <label for="username">Nombre de Usuario</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="tuser" id="tuser" placeholder="" autocomplete='tuser' required>
+                        <label for="tuser">Tipo de Usuario</label>
+                    </div>
+
+                    <div class='singupalign-end'>
+                        <div class="">
+                            <a id="cancelBtn">Cancelar</a>
+                        </div>
+                        <button type='submit'>Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

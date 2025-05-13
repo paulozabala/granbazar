@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="./resources/css/loginStyles.css">
+    <link rel="icon" href="./resources/assets/tabIcon.svg" type="image/svg">
+</head>
+
+<body>
+    <section>
+        <div style="height: 100vh;" class='center-col'>
+            <form action="./login.php" method='POST'>
+                <div class='login'>
+                    <h2>INICIO DE SESIÓN</h2>
+                    <div class="centerinputs">
+                        <div class=" input-container">
+                            <input type="email" name="email" id="mail" placeholder="" autocomplete='email' required>
+                            <label for="mail">Correo</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" name="password" id="pass" placeholder=""
+                                autocomplete='current-password' required>
+                            <label for="pass">Contraseña</label>
+                        </div>
+                    </div>
+                    <div class='align-center'>
+                        <a style="font-size: 14px;" href="./signup.html">Registrarse</a>
+                        <button style='width: fit-content;' type='submit'>Enviar</button>
+                    </div>
+                    <div class='align-end'>
+                        <a href="./loginUser.html">INGRESO EMPLEADO</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
