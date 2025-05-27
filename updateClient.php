@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "./config/db.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!empty($doc)) {
             clientUpdate($id, $userInfo, $conn);
 
-            echo "</br>" . "<a href='./dashboardClientes.php?action='inicieSesion'>Volver al Dashboard</a>";
+            echo "</br>" . "<a href='./index.html'>Volver a Iniciar Sesión</a>";
         }
 
     } else {

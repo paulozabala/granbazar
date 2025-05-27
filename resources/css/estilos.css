@@ -1,0 +1,104 @@
+        /* Estilos Generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* Un color de fondo suave */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Apila los elementos verticalmente */
+            align-items: center; /* Centra los elementos horizontalmente */
+            min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la pantalla */
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Estilos del Formulario */
+        form {
+            background-color: #ffffff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px; /* Limita el ancho del formulario para mejor legibilidad */
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block; /* Hace que la etiqueta ocupe su propia línea */
+            font-weight: bold;
+            margin-top: 15px; /* Espacio arriba de cada etiqueta */
+            margin-bottom: 5px; /* Espacio entre la etiqueta y su campo */
+            color: #555;
+        }
+
+        /* Quitar el primer margen superior para la primera etiqueta */
+        label:first-of-type {
+            margin-top: 0;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Evita que el padding aumente el tamaño total del elemento */
+            margin-bottom: 5px; /* Espacio después del campo, antes de un <br> si lo hay */
+            font-size: 1rem;
+            color: #333;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #007bff;
+            outline: none; /* Quita el contorno por defecto del navegador */
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra sutil al enfocar */
+        }
+
+        textarea {
+            min-height: 100px; /* Altura mínima para el área de texto */
+            resize: vertical; /* Permite al usuario redimensionar verticalmente */
+            /* El <br><br> en tu HTML ya crea bastante espacio, ajustamos el margen inferior */
+            margin-bottom: 0; /* El <br><br> ya da espacio, si no, sería 15px o 20px */
+        }
+
+        /* Estilos del Botón */
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+            margin-top: 20px; /* Espacio sobre el botón, considerando el <br><br> */
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos del Enlace "Volver" */
+        a {
+            display: inline-block; /* Permite aplicar padding y margen correctamente */
+            margin-top: 25px;
+            color: #007bff;
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            background-color: #007bff;
+            color: white;
+        }

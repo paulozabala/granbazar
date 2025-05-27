@@ -77,9 +77,19 @@
         });
     </script>
     <link rel="icon" href="./resources/assets/tabIcon.svg" type="image/svg">
+    <style>
+        .dashboard {
+            color:white;
+            font-family: 'Arial', sans-serif;
+            background: url('./resources/assets/indeximg.jpg');
+            object-fit: cover;
+            repeat: no-repeat;
+            
+        }
+    </style>
 </head>
 
-<body>
+<body class="dashboard">
     <?php
     session_start();
 
@@ -90,30 +100,32 @@
                 ";
     } else {
 
-        echo "<h3>Bienvenido sr(@) " . $_SESSION["user-id"] . ". " . $_SESSION["user"] . "</h3>" .
-            "<div style='display:flex; flex-direction:row; justify-content:around; width:1/3px; gap:20px;'>"
-            . "" . "<a href='./logout.php'>Cerrar sesión</a> </div>";
+        echo "<div style='background:grey; width:40%; text-align:center;'><h3>Bienvenido sr(@) " . $_SESSION["user-id"] . ". " . $_SESSION["user"] . "</h3>" .
+            "<div style='display:flex; flex-direction:row; justify-content:space-evenly; width:1/3px; gap:20px;'>"
+            . "" . "<a style='text-decoration:none; color:white; ' href='./logout.php'>Cerrar sesión</a>".
+            "<a style='text-decoration:none; color:white; ' href='./views/index.php'>Regresar a la Tienda</a></div></div>";
     }
     ?>
-
-    <h2>Información del Cliente</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>T_ID</th>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th>Ciudad</th>
-                <th>Dirección</th>
-                <th colspan="2">Acción</th>
-            </tr>
-        </thead>
-        <tbody id="userTableBody">
-            <!-- Data will be inserted here -->
-        </tbody>
-    </table>
+    <div style="background:grey; padding: 20px; margin: 20px; width:60%;">
+        <h2>Información del Cliente</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>T_ID</th>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Ciudad</th>
+                    <th>Dirección</th>
+                    <th colspan="2">Acción</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

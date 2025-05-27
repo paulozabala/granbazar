@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user-id"] = $logged["id"];
 
         //redirect user dashboard
-        header("Location: dashboardClientes.php?ingreso=exitoso&id={$_SESSION["user-id"]}");
+        header("Location: views/index.php");
 
 
         // avoid form resending and close connection
